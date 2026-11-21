@@ -1,0 +1,120 @@
+# ============================================================
+#  Voice Design Studio — .gitignore
+#  What stays local, stays local.
+# ============================================================
+
+
+# ── Model weights ────────────────────────────────────────────
+# Never push model files — they are 4.5 GB+
+# Re-download via: huggingface_hub snapshot_download()
+models_cache/
+hf_cache/
+*.safetensors
+*.bin
+*.gguf
+*.ggml
+*.pt
+*.pth
+
+
+# ── Generated audio output ───────────────────────────────────
+# Personal takes saved during use — not part of the project
+outputs/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+
+
+# ── Python virtual environment ───────────────────────────────
+# Recreated locally via: python -m venv venv
+venv/
+.venv/
+env/
+ENV/
+
+
+# ── Python bytecode & cache ──────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+
+# ── Gradio internals ─────────────────────────────────────────
+# Temp files and flagged outputs created by Gradio at runtime
+.gradio/
+gradio_cached_examples/
+flagged/
+
+
+# ── Environment & secrets ────────────────────────────────────
+# Never push API keys or local config
+.env
+.env.*
+*.env
+secrets.json
+config.local.*
+
+
+# ── Logs & debug output ──────────────────────────────────────
+*.log
+*.log.*
+logs/
+debug/
+
+
+# ── OS junk ──────────────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+
+# ── Editor & IDE folders ─────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.code-workspace
+
+
+# ── Build & packaging artifacts ──────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
+site/
+.eggs/
+
+
+# ── Jupyter notebooks ────────────────────────────────────────
+# Checkpoint files if you ever use notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+
+# ── Temporary / scratch files ────────────────────────────────
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak
+*.swp
+*.swo
